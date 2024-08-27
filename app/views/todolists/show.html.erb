@@ -2,9 +2,16 @@
 
 <%= render @todolist %>
 
-<div>
-  <%= link_to "Edit this todolist", edit_todolist_path(@todolist) %> |
-  <%= link_to "Back to todolists", todolists_path %>
 
-  <%= button_to "Destroy this todolist", @todolist, method: :delete %>
+
+
+<div class="btn-group" role="group" aria-label="Basic outlined example">
+  <%= link_to "Edit this todolist", edit_todolist_path(@todolist), class: "btn btn-primary", style: "--bs-btn-padding-y: .20rem; --bs-btn-padding-x: .3rem; --bs-btn-font-size: .70rem;" %>
+  <%= link_to "Back to todolists", todolists_path, class: "btn btn-primary", style: "--bs-btn-padding-y: .20rem; --bs-btn-padding-x: .3rem; --bs-btn-font-size: .70rem;" %>
+  
+</div>
+<br><br>
+
+<div class="d-inline-block">
+  <%= button_to "Destroy this todolist", @todolist, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-outline-primary" %>
 </div>

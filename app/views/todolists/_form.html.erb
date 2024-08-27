@@ -10,27 +10,11 @@
       </ul>
     </div>
   <% end %>
-
+      <br>
   <div>
-    <%= form.label :add, style: "display: block" %>
-    <%= form.text_field :add %>
+    <%= form.text_field :add,class: "form-control",placeholder:"Add" %>
   </div>
-
-  <div>
-    <%= form.label :edit, style: "display: block" %>
-    <%= form.text_field :edit %>
-  </div>
-
-  <div>
-    <%= form.label :remove, style: "display: block" %>
-    <%= form.text_field :remove %>
-  </div>
-
-  <div>
-    <%= form.label :mark, style: "display: block" %>
-    <%= form.text_field :mark %>
-  </div>
-
+  <br>
   <div>
     <%= form.submit %>
   </div>
